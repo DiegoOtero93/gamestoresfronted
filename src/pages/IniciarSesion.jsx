@@ -12,7 +12,7 @@ function IniciarSesion() {
         e.preventDefault(); // Previene el comportamiento por defecto del formulario
         
         try {
-            const response = await axios.post('http://localhost:3000/usuarios/login', usuario); // Realiza una solicitud POST para iniciar sesión
+            const response = await axios.post(import.meta.env.VITE_API_USUARIOS + '/login', usuario); // Realiza una solicitud POST para iniciar sesión
             if (response.status === 200) { // Si la solicitud es exitosa
                 setMensaje(response.data.mensaje); // Establece el mensaje de respuesta
                 if (response.data.usuario) { // Si hay datos de usuario en la respuesta
