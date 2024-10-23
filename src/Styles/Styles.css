@@ -1,0 +1,1004 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 20px;
+    background-color: #003366; /* Azul oscuro */
+  }
+  
+  .header__imagen {
+    max-width: 5rem;
+    height: 5rem;
+  }
+  
+  .header__nav {
+    margin-top: 20px;
+  }
+  
+  .header__lista {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .header__elementoLista {
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .header__link {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: inherit; /* Hereda el color del texto de su elemento padre */
+  }
+  
+  .header__elementoLista:hover {
+    color: #007bff;
+  }
+  
+  .header__link:hover {
+    color: #007bff; /* Cambia el color del texto al pasar el mouse sobre cualquier enlace */
+  }
+  
+  .header__enlacesExtras {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espacio entre los enlaces */
+    margin-top: 20px; /* Espacio superior adicional */
+  }
+  
+  .header__enlaceExtra {
+    margin-left: 10px; /* Ajusta el margen si es necesario */
+  }
+  @media (max-width: 768px) {
+    .header {
+      padding: 10px; /* Reducir el padding del header */
+    }
+  
+    .header__lista {
+      flex-direction: column; /* Cambiar a columnas para dispositivos pequeños */
+      gap: 10px; /* Espacio entre elementos */
+    }
+  
+    .header__elementoLista {
+      margin: 0; /* Eliminar el margen horizontal */
+      text-align: center; /* Alinear el texto al centro */
+    }
+  
+    .header__enlacesExtras {
+      margin-top: 10px; /* Reducir el espacio superior */
+    }
+  }
+  
+ /* Estilo para el botón de cerrar sesión */
+.header__enlaceExtra button {
+  background-color: #f44336; /* Rojo */
+  color: white;
+  border: none;
+  padding: 10px 20px; /* Ajusta el relleno si es necesario */
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem; /* Ajusta el tamaño de la fuente si es necesario */
+}
+
+.header__enlaceExtra button:hover {
+  background-color: #d32f2f;
+}
+
+/* Estilo para el botón de iniciar sesión y registrarse */
+.header__link.button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.header__link.button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para dispositivos móviles y tablets */
+@media (max-width: 768px) {
+  .header__enlaceExtra button,
+  .header__link.button {
+    font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+    padding: 8px 16px; /* Ajustar el relleno */
+  }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 480px) {
+  .header__enlaceExtra button,
+  .header__link.button {
+    font-size: 0.8rem; /* Reducir aún más el tamaño de la fuente */
+    padding: 6px 12px; /* Ajustar el relleno */
+  }
+}
+
+/* HERO IMAGEN */
+.heroImage {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/tiendaGamer.jpeg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) { /* Estilos para dispositivos móviles */
+  .heroImage {
+    height: 70vh; /* Altura reducida en móviles */
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/tiendaGamer.jpeg');
+    background-size: cover;
+    background-position: center; /* Centrar la imagen de fondo */
+  }
+}
+
+@media (max-width: 480px) { /* Estilos para pantallas muy pequeñas */
+  .heroImage {
+    height: 50vh; /* Altura aún más reducida en pantallas pequeñas */
+  }
+}
+
+.heroImage__contenedorTexto {
+  background-color: rgba(255, 255, 255, 0.134); /* Fondo blanco semi-transparente */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  max-width: 80%; /* Ancho máximo del contenedor */
+  text-align: center; /* Centrar el texto */
+}
+
+.heroImage__texto {
+  color: #e8eaed; /* Color de texto oscuro */
+  font-size: 24px; /* Tamaño de fuente */
+  line-height: 1.5; /* Altura de línea */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); /* Sombra de texto suave */
+}
+
+.seccionCardsInicio {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: -13rem; /* Empuja el contenido hacia abajo */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Crea tres columnas de igual tamaño */
+  gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.seccionCardsInicio__Cards {
+  width: 100%;
+  height: 13rem;
+  background-color: #ffffff3c;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease; /* Transición suave al hacer hover */
+  
+}
+
+.seccionCardsInicio__Cards:hover {
+  transform: translateY(-5px); /* Efecto de levantamiento al pasar el mouse */
+}
+
+/* Media queries para ajustes específicos */
+@media (max-width: 768px) {
+  .seccionCardsInicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Cambia a dos columnas en dispositivos más pequeños */
+  
+    
+  }
+}
+
+@media (max-width: 480px) {
+  .seccionCardsInicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ; /* Cambia a una columna en dispositivos móviles */
+    
+  }
+}
+
+  
+  /* EStilos de fondo a cards ultimos lanzamientos */
+.seccionCardsInicio__Cards:nth-child(1) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.682), rgba(0, 0, 0, 0.775)), url('/public/GTA5.jpeg') ;
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+  
+}
+
+.seccionCardsInicio__Cards:nth-child(2) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.682), rgba(0, 0, 0, 0.775)), url('/public/UFC2024.jpeg') ;
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+
+.seccionCardsInicio__Cards:nth-child(3) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.682), rgba(0, 0, 0, 0.775)), url('/public/FIFA2025.jpeg') ;
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+  
+  
+
+.seccionCardsInicio__titulo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.826);
+}
+
+.seccionCardsInicio__genero {
+  color: #eeeeee;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.seccionCardsInicio__precio {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f6f6f6; /* Color azul */
+}
+
+                                /* Seccion footer */
+.footer {
+  background-color: #607cb0;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  
+  
+}
+
+/* Estilos para los iconos de redes sociales */
+.footer__rrss {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__rrss > * {
+  font-size: 24px;
+  margin: 0 10px;
+  color: #fff;
+  transition: color 0.3s ease; 
+}
+
+.footer__rrss > *:hover {
+  color: #ff6600; /* Cambiar el color al hacer hover */
+}
+
+/* Estilo para el texto de derechos reservados */
+.footer p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Estilo para los enlaces de redes sociales */
+.footer__rrss a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer__rrss a:hover {
+  color: #ff6600; /* Cambiar el color al hacer hover */
+}
+/* Media queries para ajustes específicos */
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px; /* Ajustar el padding para tablets */
+  }
+
+  .footer__rrss > * {
+    font-size: 20px; /* Ajustar el tamaño del icono para tablets */
+    margin: 0 8px; /* Ajustar el margen para tablets */
+  }
+
+  .footer p {
+    font-size: 12px; /* Ajustar el tamaño de la fuente para tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 10px; /* Ajustar el padding para móviles */
+  }
+
+  .footer__rrss > * {
+    font-size: 18px; /* Ajustar el tamaño del icono para móviles */
+    margin: 0 6px; /* Ajustar el margen para móviles */
+  }
+
+  .footer p {
+    font-size: 10px; /* Ajustar el tamaño de la fuente para móviles */
+  }
+}
+  
+  .botonArriba{
+
+    position: fixed;
+    bottom: 1rem;
+    right: 1.5rem;
+    z-index: 1;
+    border: white 1px solid;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0);
+    transition: background-color 0.5s ease-out;
+  }
+
+
+  .botonArriba:hover{
+    background-color: black;
+    color: white;
+  }
+  @media (max-width: 768px) {
+    .botonArriba {
+      bottom: 1rem;
+      right: 1rem; /* Ajustar la posición del botón para tablets */
+      padding: 0.4rem 0.8rem; /* Ajustar el padding para tablets */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .botonArriba {
+      bottom: 0.5rem;
+      right: 0.5rem; /* Ajustar la posición del botón para móviles */
+      padding: 0.3rem 0.6rem; /* Ajustar el padding para móviles */
+      font-size: 0.9rem; /* Ajustar el tamaño de la fuente para móviles */
+    }
+  }
+
+  .team__imagen {
+    width: 20rem;
+    height: 25rem;
+    object-fit: cover; /* Asegura que la imagen se ajuste dentro del contenedor */
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+  }
+  
+  .team__card {
+    display: flex;
+    width: 60%;
+    max-width: 800px; /* Limita el ancho máximo para un diseño más controlado */
+    border: 1px solid #ccc; /* Borde más delgado y color gris claro */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */  
+    overflow: hidden; /* Evita que el contenido se desborde */
+  }
+  
+  .team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+  }
+  
+  .team__contenedorTexto {
+    padding: 1.5rem; /* Añade un poco de espacio dentro del contenedor */
+  }
+  
+  .team__titulo {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2e6da4; /* Color azul para el título */
+  }
+  
+  .team__texto {
+    font-size: 1rem;
+    line-height: 1.6; /* Espaciado de línea aumentado para una mejor legibilidad */
+    color: #555; /* Color de texto más oscuro */
+  }
+  @media (max-width: 768px) {
+    .team__card {
+      flex-direction: column; /* Apila la imagen y el texto en columna */
+      width: 90%; /* Ajusta el ancho para tablets más pequeñas */
+    }
+  
+    .team__imagen {
+      width: 100%; /* Imagen ocupa el ancho completo del contenedor */
+      height: auto; /* Ajusta la altura automáticamente */
+    }
+  
+    .team__contenedorTexto {
+      padding: 1rem; /* Ajusta el padding para tablets */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .team__card {
+      width: 100%; /* Ajusta el ancho para móviles */
+    }
+  
+    .team__titulo {
+      font-size: 1.5rem; /* Ajusta el tamaño del título para móviles */
+    }
+  
+    .team__texto {
+      font-size: 0.9rem; /* Ajusta el tamaño del texto para móviles */
+    }
+  }
+              /* seccion videojuegos */
+
+
+
+  .videojuegos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 20px; /* Espacio entre las tarjetas */
+    padding: 20px;
+    justify-items: center;
+  }
+  
+  .videojuegos__contenedorJuego {
+    width: 100%;
+    max-width: 300px; /* Ancho máximo más pequeño para las tarjetas */
+    margin: 1rem auto; /* Centra las tarjetas horizontalmente */
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 255, 0.5); /* Sombra azul más notoria */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+  }
+  
+  .videojuegos__contenedorJuego:hover {
+    transform: translateY(-5px); /* Efecto de levantamiento al pasar el mouse */
+    box-shadow: 0 4px 8px rgba(14, 14, 15, 0.5); /* Sombra azul más notoria */
+  }
+  
+  .videojuegos__titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333; /* Color del título */
+    margin:0 0 0.5rem 0;
+  }
+  
+  .videojuegos__contenedorJuego p {
+    margin: 0.5rem 0; /* Espaciado vertical entre párrafos */
+    color: #555; /* Color de texto */
+  }
+  
+  .videojuegos__contenedorJuego p span {
+    font-weight: bold;
+    color: #007bff; /* Color azul para destacar */
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .videojuegos {
+      grid-template-columns: 1fr; /* Una columna en pantallas más pequeñas */
+    }
+  }
+  
+
+  /* CAROUSEL IMAGENES */
+  .carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .carousel__titulo {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .carousel__contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+  }
+  
+  .carousel__contenedor button {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .carousel__contenedor button:hover {
+    color: #007bff;
+  }
+  
+  .carousel__imagenes {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .boton__left {
+    position: absolute;
+    left: -50px;
+  }
+  
+  .boton__right {
+    position: absolute;
+    right: -50px;
+  }
+  @media (max-width: 768px) {
+    .carousel__imagenes {
+      height: 250px; /* Ajusta la altura de la imagen para tablets más pequeñas */
+    }
+    
+    .boton__left {
+      left: -20px; /* Ajusta la posición del botón para tablets más pequeñas */
+    }
+    
+    .boton__right {
+      right: -20px; /* Ajusta la posición del botón para tablets más pequeñas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .carousel__titulo {
+      font-size: 1.5rem; /* Ajusta el tamaño del título para móviles */
+    }
+    
+    .carousel__contenedor button {
+      font-size: 1.5rem; /* Ajusta el tamaño del botón para móviles */
+    }
+    
+    .carousel__imagenes {
+      height: 200px; /* Ajusta la altura de la imagen para móviles */
+    }
+    
+    .boton__left {
+      left: -10px; /* Ajusta la posición del botón para móviles */
+    }
+    
+    .boton__right {
+      right: -10px; /* Ajusta la posición del botón para móviles */
+    }
+  }
+  
+  /* PanelDeControl.css */
+
+.seccion__main {
+  padding: 20px;
+}
+
+.seccion__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.seccion__cards {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.seccion__cards h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  padding: 0.5rem;
+}
+
+.seccion__cards p {
+  margin-bottom: 8px;
+  padding: 0.5rem;
+
+}
+
+.seccion__cards a {
+  text-decoration: none;
+  color: #0b13ff;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  
+}
+
+.seccion__cards a:hover {
+  color: dodgerblue;
+}
+
+.pie__main {
+  margin-top: 20px;
+  text-align: center;
+  
+
+}
+/* Estilo para el botón de cerrar sesión */
+.boton__cerrarSesion {
+  background-color: #dc3545; /* Color de fondo rojo */
+  color: white; /* Color del texto blanco */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor de mano */
+  font-size: 1rem; /* Tamaño de fuente */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave para el color de fondo y la transformación */
+  position: fixed; /* Posición fija */
+  top: 10px; /* Espaciado desde la parte superior */
+  right: 10px; /* Espaciado desde la derecha */
+  z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+}
+
+.boton__cerrarSesion:hover {
+  background-color: #c82333; /* Color de fondo al pasar el mouse */
+  transform: translateY(-2px); /* Efecto de levantar al pasar el mouse */
+}
+
+.boton__cerrarSesion:active {
+  background-color: #bd2130; /* Color de fondo al hacer clic */
+  transform: translateY(0); /* Elimina el efecto de levantar al hacer clic */
+}
+
+/* Responsivo para el botón de cerrar sesión */
+@media (max-width: 480px ) {
+  .boton__cerrarSesion {
+    padding: 8px 16px; /* Reduce el espaciado interno en pantallas pequeñas */
+    font-size: 14.4px; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+  }
+}
+/* Estilo para el contenedor del formulario */
+.login__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Estilo para el mensaje de error */
+.login__error {
+  color: red;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+/* Estilo para las etiquetas */
+.login__label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Estilo para los campos de entrada */
+.login__input {
+  width: 100%;
+  padding: 10px;
+  margin: 0 0 10px 0 ;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login__input:focus {
+  border-color: #007bff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+/* Estilo para el botón de envío */
+.login__submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login__submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsivo para el formulario de inicio de sesión */
+@media (max-width: 480px) {
+  .login__form {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .login__label {
+    font-size: 0.9rem;
+  }
+
+  .login__input,
+  .login__submit-btn {
+    font-size: 0.9rem;
+  }
+}
+
+/* input de usuarios  */
+/* Estilo para el contenedor principal del formulario */
+.login-form__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Estilo para el título del formulario */
+.login-form__titulo {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Estilo para el formulario */
+.login-form__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Estilo para las etiquetas del formulario */
+.login-form__label {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Estilo para los campos de entrada del formulario */
+.login-form__input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form__input:focus {
+  border-color: #007bff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+/* Estilo para el botón de envío del formulario */
+.login-form__submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form__submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para el mensaje de éxito o error */
+.login-form__mensaje {
+  color: green;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Responsivo para el formulario de inicio de sesión */
+@media (max-width: 480px) {
+  .login-form__main {
+      padding: 15px;
+      max-width: 90%;
+  }
+
+  .login-form__label {
+      font-size: 14.4px;
+  }
+
+  .login-form__input,
+  .login-form__submit-btn {
+      font-size: 14.4px;
+  }
+}
+/* input para registrarse */
+/* Estilo para el contenedor principal del formulario */
+.register-form__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Estilo para el título del formulario */
+.register-form__titulo {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Estilo para el formulario */
+.register-form__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Estilo para las etiquetas del formulario */
+.register-form__label {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Estilo para los campos de entrada del formulario */
+.register-form__input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-form__input:focus {
+  border-color: #007bff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+/* Estilo para el botón de envío del formulario */
+.register-form__submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-form__submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para el mensaje de éxito o error */
+.register-form__mensaje {
+  color: green;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Responsivo para el formulario de registro */
+@media (max-width: 480px) {
+  .register-form__main {
+      padding: 15px;
+      max-width: 90%;
+  }
+
+  .register-form__label {
+      font-size: 14.4px;
+  }
+
+  .register-form__input,
+  .register-form__submit-btn {
+      font-size: 14.4px;
+  }
+}
+
+/* NuevoJuego.css */
+
+/* Contenedor principal */
+form {
+  max-width: 600px; /* Ancho máximo del formulario */
+  margin: 20px auto; /* Centra el formulario en la página */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  background-color: #f9f9f9; /* Color de fondo claro */
+}
+
+/* Estilo para los encabezados */
+h2 {
+  text-align: center; /* Centra el texto del encabezado */
+  color: #333; /* Color del texto */
+}
+
+/* Estilo para etiquetas */
+label {
+  display: block; /* Hace que las etiquetas ocupen toda la línea */
+  margin-bottom: 8px; /* Espacio debajo de las etiquetas */
+  font-weight: bold; /* Texto en negrita */
+  color: #555; /* Color del texto */
+}
+
+/* Estilo para los inputs y textarea */
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%; /* Hace que los campos ocupen todo el ancho */
+  padding: 10px; /* Espaciado interno */
+  margin-bottom: 15px; /* Espacio debajo de los campos */
+  border: 1px solid #ccc; /* Borde gris claro */
+  border-radius: 4px; /* Bordes redondeados */
+  transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+/* Efecto al enfocar los inputs */
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  border-color: #007bff; /* Cambia el color del borde al enfocar */
+  outline: none; /* Elimina el contorno predeterminado */
+}
+
+/* Estilo para el botón de envío */
+input[type="submit"] {
+  background-color: #007bff; /* Color de fondo azul */
+  color: white; /* Color del texto */
+  padding: 10px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  transition: background-color 0.3s; /* Transición suave para el fondo */
+}
+
+/* Efecto al pasar el cursor sobre el botón */
+input[type="submit"]:hover {
+  background-color: #0056b3; /* Color de fondo más oscuro al pasar el cursor */
+}
+
+/* Estilo para los mensajes de error */
+p {
+  
+  text-align: center; /* Centra el mensaje de error */
+}
