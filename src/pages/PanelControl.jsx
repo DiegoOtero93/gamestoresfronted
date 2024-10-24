@@ -14,7 +14,7 @@ function PanelDeControl() {
       window.location.href = '/'; // Redirigir usando window.location.href
     } else {
       // Si es administrador, cargar los juegos desde la API
-      fetch('http://localhost:3000/productos')
+      fetch('https://gamestore-backend-delta.vercel.app/productos')
         .then(res => res.json())
         .then(datos => {
           setJuegos(datos);
