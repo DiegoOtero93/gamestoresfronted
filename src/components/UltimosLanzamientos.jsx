@@ -17,7 +17,7 @@ function UltimosLanzamientos() {
 
     return (
         <section className='seccionCardsInicio'>
-            {tresultimos.map(productos => (
+            {tresultimos.map(producto => (
                 <div key={producto.id} className='seccionCardsInicio__Cards'>
                     <p className='seccionCardsInicio__titulo'>{producto.nombre}</p>
                     <p className='seccionCardsInicio__genero'>{producto.genero}</p>
