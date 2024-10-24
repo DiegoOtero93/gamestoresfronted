@@ -25,7 +25,7 @@ function NuevoJuego() {
             body: JSON.stringify(nuevoJuego)
         };
 
-        fetch('http://localhost:3000/productos', opciones)
+        fetch('https://gamestore-backend-delta.vercel.app/productos', opciones)
             .then(res => {
                 if (!res.ok) {
                     throw new Error('Error al crear el juego. Código de error: ' + res.status);
