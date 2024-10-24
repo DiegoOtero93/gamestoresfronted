@@ -7,7 +7,7 @@ function EditarJuego() {
     const navegador = useNavigate();
 
     useEffect(() => {
-        fetch(`http://localhost:3000/productos/${id}`)
+        fetch(`https://gamestore-backend-delta.vercel.app/productos/${id}`)
             .then(res => {
                 if (!res.ok) {
                     throw new Error(`Error al obtener el juego. Código de error: ${res.status}`);
