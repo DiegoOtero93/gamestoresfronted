@@ -17,11 +17,11 @@ function UltimosLanzamientos() {
 
     return (
         <section className='seccionCardsInicio'>
-            {tresultimos.map(videojuego => (
-                <div key={videojuego.id} className='seccionCardsInicio__Cards'>
-                    <p className='seccionCardsInicio__titulo'>{videojuego.nombre}</p>
-                    <p className='seccionCardsInicio__genero'>{videojuego.genero}</p>
-                    <p className='seccionCardsInicio__precio'>{videojuego.precio}$</p>
+            {tresultimos.map(productos => (
+                <div key={producto.id} className='seccionCardsInicio__Cards'>
+                    <p className='seccionCardsInicio__titulo'>{producto.nombre}</p>
+                    <p className='seccionCardsInicio__genero'>{producto.genero}</p>
+                    <p className='seccionCardsInicio__precio'>{producto.precio}$</p>
                 </div>
             ))}
         </section>
