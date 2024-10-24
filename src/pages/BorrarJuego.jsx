@@ -16,7 +16,7 @@ function Borrarjuego() {
         };
 
         try {
-            const response = await fetch(`http://localhost:3000/productos?id=${id}`, opciones);
+            const response = await fetch(`https://gamestore-backend-delta.vercel.app/productos?id=${id}`, opciones);
 
             if (!response.ok) {
                 throw new Error('Error al borrar el juego. Código de error: ' + response.status);
